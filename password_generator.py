@@ -1,7 +1,6 @@
 import string
 import random
 
-"""
 def intValidation(str):
     while True:
         try:
@@ -11,17 +10,16 @@ def intValidation(str):
             continue
         else:
             return userInput 
-            break 
+             
 
 
-length= intValidation("Password Length: ")
-    
-while length<5:
-    print("Min Length is 5")
+
+def generate_password():
     length= intValidation("Password Length: ")
-"""
-characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
-def generate_password(length):
+    while length<5:
+        print("Min Length is 5")
+        length= intValidation("Password Length: ")
+    characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
     random.shuffle(characters)
     password=""
     for i in range(length):
